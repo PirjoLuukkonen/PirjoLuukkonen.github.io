@@ -1,0 +1,25 @@
+body {
+    color: rgb(22, 14, 14);
+    background-color: rgb(141, 125, 63);
+  }
+  
+  h1 {
+    color: rgb(24, 20, 20);
+    background-color: rgb(244, 243, 238);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: (100,80);
+
+  }
+  h2 {
+    color: rgb(232, 219, 219);
+    text-align: center;
+    font-family: 'Arial Narrow Bold', sans-serif;
+  }
+  button{
+    color: rgb(22, 14, 14);
+    background-color: rgb(243, 191, 59);
+  }
+  footer{
+    color: rgb(22, 14, 14);
+    background-color: rgb(233, 230, 224);
+  }
