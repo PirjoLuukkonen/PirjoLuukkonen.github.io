@@ -1,25 +1,61 @@
 body {
-    color: rgb(22, 14, 14);
-    background-color: rgb(141, 125, 63);
-  }
-  
-  h1 {
-    color: rgb(24, 20, 20);
-    background-color: rgb(244, 243, 238);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: (100,80);
-
-  }
-  h2 {
-    color: rgb(232, 219, 219);
+    color: rgb(1, 7, 16);
+    background-color: rgb(254, 251, 248);
+    max-width: 1000px;
+}
+  header {
     text-align: center;
-    font-family: 'Arial Narrow Bold', sans-serif;
   }
-  button{
-    color: rgb(22, 14, 14);
-    background-color: rgb(243, 191, 59);
+  .logo {
+    width:20%;
+  }
+  .kaaryleet {
+    width:100%;
+  }
+  .kuvaus {
+    color: rgb(1, 7, 16);
+    background-color: #C7B097;
+    font-family: 'Sriracha', serif;
+    font-size: 30px;
+    text-align: center;
+    padding: 50px;
+    margin-right: 50%;
+    margin-top: 0px;
+    margin-left: 0px;
+    max-height: 325px;
+    max-width:500px;
+  }
+  .lusikat {
+    width:50%;
+    float: right;
+    padding: 0px ;
+    max-height: 325px;
+    max-width:500px;
+  }
+  nav a {
+    background-color: #FFD094;
+    color: #010710;
+    padding: 2px 25px;
+    text-align: center;
+    text-decoration: 100px;
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    align-items: center;
+    font-family:'Noto Sans', Sans-serif;
+  }
+  a:hover, a:active {
+    background-color: #C7B097;
+  }
+  hr {
+    height:2px;
+    background-color:rgb(1, 7, 16);
+    border-width:0;
   }
   footer{
-    color: rgb(22, 14, 14);
-    background-color: rgb(233, 230, 224);
+    color: rgb(1, 7, 16);
+    background-color: rgb(254, 251, 248);
+    text-align: center;
   }
