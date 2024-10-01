@@ -6,15 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
     <meta name="googlebot" content="noindex">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header id="reseptit">
-        <img src="Logo.jpg" style="width:20%;" alt="Sivuston nimi makuja Thaimaasta">
+    <header>
+        <a href="index.html">
+            <img class="logo" src="Logo.jpg" alt="Logona on sivuston nimi makuja Thaimaasta">
+        </a>
+        <hr>
         <nav>
             <a href="index.html">Etusivu</a>
             <a href="reseptit.html" id="valittu">Reseptit</a>
             <a href="info.html">Info</a>
         </nav>
-    </header>       
+        <hr>
+    </header>
+    <article class="kaikki-reseptit">
+        <h2>Kaikki reseptit</h2>
+        <div id="lista">
+            <p>Suosituimmat ruuat:</p>
+            <ol>
+                <li>Pad Thai</li>
+                <li>Red Curry</li>
+                <li>Khao Pad</li>
+            </ol>
+        </div>
+        <article class="resepti">
+            <h3>Red Curry</h3>
+            <a id="ohje" href="info.html">Ohje</a>
+            <hr>
+            <img id="reseptikuvat" src="Redcurry.jpg" alt="Kulholliset Red currya ja riisiä">
+        </article>
+        <article class="resepti">
+            <h3>Pad thai</h3>
+            <img id="reseptikuvat" src="PadThai.jpg" alt="Kulholliset Red currya ja riisiä">
+        </article>
+        <article class="kuvapainike">
+            <img src="Khaopad.jpg" alt="Avatar" class="image" style="width:100%">
+            <div class="painike">
+              <div class="teksti"><a href="info.html">Ohje</a></div>
+            </div>
+        </article>
+<footer>
+<hr>
+    <div>
+        <p>Ota yhteyttä</p>
+        <p>Copyright &copy; 2024</p>
+    </div>
+</footer> 
 </body>
 </html>

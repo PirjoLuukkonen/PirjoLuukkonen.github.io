@@ -1,13 +1,14 @@
 body {
     color: rgb(1, 7, 16);
     background-color: rgb(254, 251, 248);
-    max-width: 1000px;
+    margin-left: 20%;
+    margin-right: 20%;
 }
   header {
     text-align: center;
   }
   .logo {
-    width:20%;
+    width:250px;
   }
   .kaaryleet {
     width:100%;
@@ -18,19 +19,32 @@ body {
     font-family: 'Sriracha', serif;
     font-size: 30px;
     text-align: center;
-    padding: 50px;
-    margin-right: 50%;
-    margin-top: 0px;
-    margin-left: 0px;
-    max-height: 325px;
-    max-width:500px;
+    width: 50%;
+    padding: 5%;
+    margin: 0px 0px 0px 0px;
   }
   .lusikat {
     width:50%;
-    float: right;
-    padding: 0px ;
-    max-height: 325px;
-    max-width:500px;
+  }
+  #kuvauslusikat {
+  display: flex;
+  flex-direction: row;
+  }
+  #selaa {
+    background-color: #FFD094;
+    color: #010710;
+    border-color: #010710;
+    border: 1px;
+    padding: 2px 25px;
+    text-align: center;
+    text-decoration: 100px;
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    align-items: center;
+    font-family:'Noto Sans', Sans-serif;
   }
   nav a {
     background-color: #FFD094;
@@ -49,6 +63,9 @@ body {
   a:hover, a:active {
     background-color: #C7B097;
   }
+  #valittu {
+    background-color: #C7B097;
+  }
   hr {
     height:2px;
     background-color:rgb(1, 7, 16);
@@ -59,3 +76,108 @@ body {
     background-color: rgb(254, 251, 248);
     text-align: center;
   }
+  .fa {
+    padding: 0px;
+    font-size: 40px;
+    width: 60px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .fa:hover {
+    opacity: 0.7;
+    background-color: rgb(254, 251, 248);
+    color: #C7B097;
+  }
+  .fa-facebook {
+    background: rgb(254, 251, 248);
+    color: rgb(1, 7, 16);
+  }
+  .fa-instagram {
+    background: rgb(254, 251, 248);
+    color: rgb(1, 7, 16);
+  }
+@font-face {
+  font-family:otsikko;
+  src: https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap
+}
+/*reseptit sivun css*/
+.kaikki-reseptit{
+  background-color: #C7B097;
+  width: 100%;
+}
+h2 {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+#lista {
+  padding-top: 0px;
+  padding-left: 10px;
+}
+.resepti {
+  background: rgb(254, 251, 248);
+  margin: 5%;
+  width: 40%;
+}
+.resepti > img {
+  margin: 5%;
+  align-items: center;
+}
+.resepti > h3 {
+  padding: 5px 0px 0px 5px;
+}
+#ohje {
+  background-color: #FFD094;
+  color: #010710;
+  border-color: #010710;
+  border: 1px;
+  padding: 2px 25px;
+  text-align: center;
+  text-decoration: 100px;
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  align-items: center;
+  font-family:'Noto Sans', Sans-serif;
+}
+.kuvapainike {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.painike {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.kuvapainike:hover .image {
+  opacity: 0.3;
+}
+
+.kuvapainike:hover .painike {
+  opacity: 1;
+}
+
+.teksti {
+  background-color: #FFD094;
+  color: 010710;
+  font-size: 16px;
+  padding: 16px 32px;
+  font-family: 'Times New Roman', Times, serif;
+}

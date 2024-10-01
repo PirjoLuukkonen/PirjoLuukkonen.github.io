@@ -6,15 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
     <meta name="googlebot" content="noindex">
+    <link rel="stylesheet" href="styles.css">
 </head>
+<style>
+    table {
+      font-family: Noto Sans, sans-serif;
+      border-collapse: collapse;
+      width: 50%;
+    }
+    
+    td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    </style>
 <body>
-    <header id="info">
-        <img src="Logo.jpg" style="width:20%;" alt="Sivuston nimi makuja Thaimaasta">
-        <nav>
-            <a href="index.html">Etusivu</a>
-            <a href="reseptit.html">Reseptit</a>
-            <a href="info.html" id="valittu">Info</a>
-        </nav>
-    </header>       
+  <header>
+    <a href="index.html">
+        <img class="logo" src="Logo.jpg" alt="Logona on sivuston nimi makuja Thaimaasta">
+    </a>
+    <hr>
+    <nav>
+        <a href="index.html">Etusivu</a>
+        <a href="reseptit.html">Reseptit</a>
+        <a href="info.html" id="valittu">Info</a>
+    </nav>
+    <hr>
+</header>
+    <figure>
+        <img src="jauhokulho.jpg" alt="Tee lusikasta kaadetaan curry jauhetta jauhokulhoon" style="width:40%">
+        <figcaption>Ei vielä mitään</figcaption>
+    </figure>
+    <h2>Yhteystiedot</h2>
+    <table>
+        <tr>
+          <td>Sähköposti:</td>
+          <td><a href="eikaytossa@notforuse.fi">info@makujathaimaasta.fi</a></td>
+        </tr>
+        <tr>
+          <td>Puhelinnumero:</td>
+          <td>0101010101</td>
+        </tr>
+    </table>
+<footer>
+  <hr>
+    <div>
+        <p>Ota yhteyttä</p>
+        <p>Copyright &copy; 2024</p>
+    </div>
+</footer>   
 </body>
 </html>
