@@ -1,152 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Sriracha&display=swap');
 
+/*kaikille sivuille yhteinen*/
 body {
-    color: rgb(1, 7, 16);
-    background-color: rgb(254, 251, 248);
-    margin-left: 20%;
-    margin-right: 20%;
+  color: #010710;
+  background-color: #FEFBF8;
 }
-  header {
-    text-align: center;
-  }
-  .logo {
-    width:250px;
-  }
-  /*Etusivu*/
-  .kaaryleet {
-    width:100%;
-  }
-  .kuvaus {
-    color: rgb(1, 7, 16);
-    background-color: #C7B097;
-    font-family: "Sriracha", cursive;
-    font-size: 130%;
-    text-align: center;
-    width: 50%;
-    padding: 5%;
-    margin: 0px 0px 0px 0px;
-  }
-  .lusikat {
-    width:50%;
-  }
-  #kuvauslusikat {
-  display: flex;
-  flex-direction: row;
-  }
-  #selaa {
-    background-color: #FFD094;
-    color: #010710;
-    border-color: #010710;
-    border: 1px;
-    padding: 2px 25px;
-    text-align: center;
-    text-decoration: 100px;
-    display: inline-block;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    align-items: center;
-    font-family:'Noto Sans', Sans-serif;
-    font-size: 70%;
-  }
-  nav a {
-    background-color: #FFD094;
-    color: #010710;
-    padding: 2px 25px;
-    text-align: center;
-    text-decoration: 100px;
-    display: inline-block;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    align-items: center;
-    font-family:'Noto Sans', Sans-serif;
-  }
-  a:hover, a:active {
-    background-color: #C7B097;
-  }
-  #valittu {
-    background-color: #C7B097;
-  }
-  hr {
-    height:2px;
-    background-color:rgb(1, 7, 16);
-    border-width:0;
-  }
-  footer{
-    color: rgb(1, 7, 16);
-    background-color: rgb(254, 251, 248);
-    text-align: center;
-  }
-  .fa {
-    padding: 0px;
-    font-size: 40px;
-    width: 60px;
-    text-align: center;
-    text-decoration: none;
-  }
-  .fa:hover {
-    opacity: 0.7;
-    background-color: rgb(254, 251, 248);
-    color: #C7B097;
-  }
-  .fa-facebook {
-    background: rgb(254, 251, 248);
-    color: rgb(1, 7, 16);
-  }
-  .fa-instagram {
-    background: rgb(254, 251, 248);
-    color: rgb(1, 7, 16);
-  }
-/*reseptit sivun css*/
-* {
-  box-sizing: border-box;
+header {
+  text-align: center;
 }
-.kaikkireseptit{
-  background-color: #C7B097;
-  width: 100%;
+.logo {
+  width:30%;
 }
-.column {
-  float: left;
+nav a {
+  background-color: #FFD094;
+  color: #010710;
+  padding: 2px 25px;
+  text-align: center;
+  text-decoration: 100px;
+  display: inline-block;
+  margin: 2%;
   align-items: center;
-  padding: 0px 0px 15px 15px;
-  width: 100%;
-  background-color: rgb(254, 251, 248);
-  max-width: 40%;
-  margin: 10px;
-}
-#reseptikuvat {
-  align-items: center;
-}
-h2 {
-  padding-top: 10px;
-  padding-left: 10px;
-  font-family: "Sriracha", cursive;
-}
-h3 {
-  font-family: "Sriracha", cursive;
-}
-#lista {
-  padding-top: 0px;
-  padding-left: 10px;
   font-family:'Noto Sans', Sans-serif;
 }
-.resepti {
-  background: rgb(254, 251, 248);
-  margin: 5%;
-  width: 40%;
+a:hover, a:active {
+  background-color: #C7B097;
 }
-.resepti > img {
-  margin: 5%;
-  align-items: center;
+#valittu {
+  background-color: #C7B097;
 }
-.resepti > h3 {
-  padding: 5px 0px 0px 5px;
+hr {
+  height:2px;
+  background-color: #010710;
+  border-width:0;
 }
-#ohje {
+footer{
+  text-align: center;
+  padding: 5%;
+}
+.fa {
+  padding: 0px;
+  font-size: 40px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+}
+.fa:hover {
+  opacity: 0.7;
+  background-color: #FEFBF8;
+  color: #C7B097;
+}
+.fa-facebook {
+  background: #FEFBF8;
+  color: #010710;
+}
+.fa-instagram {
+  background: #FEFBF8;
+  color: #010710;
+}
+
+/*etusivun tyylit*/
+.kaaryleet {
+  width:100%;
+}
+.kuvaus {
+  color: #010710;
+  background-color: #C7B097;
+  font-family: "Sriracha", cursive;
+  font-size: 130%;
+  text-align: center;
+  padding: 5%;
+  margin: 0px;
+}
+#selaa {
   background-color: #FFD094;
   color: #010710;
   border-color: #010710;
@@ -161,54 +87,147 @@ h3 {
   margin-bottom: 10px;
   align-items: center;
   font-family:'Noto Sans', Sans-serif;
+  font-size: 70%;
 }
-.kuvapainike {
-  position: relative;
-  width: 50%;
-}
-
-.image {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
+/*info sivun tyyli*/
+/*iso näyttö*/
+@media screen and (min-width: 1000px) {
+body {
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
-.painike {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
+  /*etusivu*/
+  .kuvaus {
+    width: 50%;
+  }
+  .lusikat {
+    width:50%;
+  }
+  #kuvauslusikat {
+  display: flex;
+  flex-direction: row;
+  }
 
-.kuvapainike:hover .image {
-  opacity: 0.3;
-}
+  /*reseptit sivun css*/
+  * {
+    box-sizing: border-box;
+  }
+  .kaikkireseptit{
+    background-color: #C7B097;
+    width: 100%;
+  }
+  .column {
+    float: left;
+    align-items: center;
+    padding: 0px 0px 15px 15px;
+    width: 100%;
+    background-color: rgb(254, 251, 248);
+    max-width: 40%;
+    margin: 10px;
+  }
+  #reseptikuvat {
+    align-items: center;
+  }
+  h2 {
+    padding-top: 10px;
+    padding-left: 10px;
+    font-family: "Sriracha", cursive;
+  }
+  h3 {
+    font-family: "Sriracha", cursive;
+  }
+  #lista {
+    padding-top: 0px;
+    padding-left: 10px;
+    font-family:'Noto Sans', Sans-serif;
+  }
+  .resepti {
+    background: rgb(254, 251, 248);
+    margin: 5%;
+    width: 40%;
+  }
+  .resepti > img {
+    margin: 5%;
+    align-items: center;
+  }
+  .resepti > h3 {
+    padding: 5px 0px 0px 5px;
+  }
+  #ohje {
+    background-color: #FFD094;
+    color: #010710;
+    border-color: #010710;
+    border: 1px;
+    padding: 2px 25px;
+    text-align: center;
+    text-decoration: 100px;
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    align-items: center;
+    font-family:'Noto Sans', Sans-serif;
+  }
+  .kuvapainike {
+    position: relative;
+    width: 50%;
+  }
 
-.kuvapainike:hover .painike {
-  opacity: 1;
-}
-.teksti {
-  background-color: #FFD094;
-  color: #010710;
-  font-size: 16px;
-  padding: 16px 32px;
-  font-family: 'Times New Roman', Times, serif;
-}
-.column {
-  float: left;
-  width: 50%;
-}
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/*Info sivu*/
+  .image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
 
+  .painike {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .kuvapainike:hover .image {
+    opacity: 0.3;
+  }
+
+  .kuvapainike:hover .painike {
+    opacity: 1;
+  }
+  .teksti {
+    background-color: #FFD094;
+    color: #010710;
+    font-size: 16px;
+    padding: 16px 32px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .column {
+    float: left;
+    width: 50%;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
 /*mobiilikoko*/
+@media (max-width: 800px) {
+  body {
+    margin:0px;
+  }
+  /*Etusivu*/
+  .kuvaus {
+    width: 100%;
+  }
+  .lusikat {
+    width:100%;
+  }
+}
