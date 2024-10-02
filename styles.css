@@ -35,6 +35,8 @@ hr {
   border-width:0;
 }
 footer{
+  font-family: 'Noto Sans', Sans-serif;
+  font-size: 16px;
   text-align: center;
   padding: 5%;
 }
@@ -89,8 +91,36 @@ footer{
   font-family:'Noto Sans', Sans-serif;
   font-size: 70%;
 }
-/*info sivun tyyli*/
-/*iso näyttö*/
+/*resepti sivun tyyli*/
+.kaikkireseptit{
+  background-color: #C7B097;
+  width: 100%;
+}
+.painikkeet {
+  background-color: #FEFBF8;
+}
+h2 {
+  font-family: "Sriracha", cursive;
+  font-size: 30px;
+  padding: 0% 2% 2% 2%;
+  margin: 1%;
+}
+h3 {
+  font-family: "Sriracha", cursive;
+  font-size: 20px;
+}
+#lista {
+  padding: 1% 2% 2% 2%;
+  font-family:'Noto Sans', Sans-serif;
+  font-size: 16px;
+  margin: 1%;
+}
+  /*info sivun tyylit*/
+  table {
+    font-family:'Noto Sans', Sans-serif;
+  }
+
+/*tyylit isossa näyttössä*/
 @media screen and (min-width: 1000px) {
 body {
     margin-left: 20%;
@@ -109,50 +139,18 @@ body {
   flex-direction: row;
   }
 
-  /*reseptit sivun css*/
+  /*reseptit*/
   * {
     box-sizing: border-box;
   }
-  .kaikkireseptit{
-    background-color: #C7B097;
-    width: 100%;
-  }
-  .column {
+  .painikkeet {
     float: left;
-    align-items: center;
-    padding: 0px 0px 15px 15px;
-    width: 100%;
-    background-color: rgb(254, 251, 248);
-    max-width: 40%;
-    margin: 10px;
+    padding: 0% 0% 4% 4%;
+    max-width: 45%;
+    margin: 2%;
   }
   #reseptikuvat {
-    align-items: center;
-  }
-  h2 {
-    padding-top: 10px;
-    padding-left: 10px;
-    font-family: "Sriracha", cursive;
-  }
-  h3 {
-    font-family: "Sriracha", cursive;
-  }
-  #lista {
-    padding-top: 0px;
-    padding-left: 10px;
-    font-family:'Noto Sans', Sans-serif;
-  }
-  .resepti {
-    background: rgb(254, 251, 248);
-    margin: 5%;
-    width: 40%;
-  }
-  .resepti > img {
-    margin: 5%;
-    align-items: center;
-  }
-  .resepti > h3 {
-    padding: 5px 0px 0px 5px;
+    max-width: 90%;
   }
   #ohje {
     background-color: #FFD094;
@@ -170,20 +168,12 @@ body {
     align-items: center;
     font-family:'Noto Sans', Sans-serif;
   }
+
+  /*tutki kuva painike*/
   .kuvapainike {
     position: relative;
     width: 50%;
   }
-
-  .image {
-    opacity: 1;
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: .5s ease;
-    backface-visibility: hidden;
-  }
-
   .painike {
     transition: .5s ease;
     opacity: 0;
@@ -193,11 +183,9 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
   }
-
   .kuvapainike:hover .image {
     opacity: 0.3;
   }
-
   .kuvapainike:hover .painike {
     opacity: 1;
   }
@@ -208,7 +196,7 @@ body {
     padding: 16px 32px;
     font-family: 'Times New Roman', Times, serif;
   }
-  .column {
+  .painikkeet {
     float: left;
     width: 50%;
   }
@@ -216,6 +204,13 @@ body {
     content: "";
     display: table;
     clear: both;
+  }
+  /*info sivu*/
+  .yhteystiedot {
+    float: right;
+  }
+  #jauhokulho {
+    width: 40%;
   }
 }
 /*mobiilikoko*/
@@ -229,5 +224,13 @@ body {
   }
   .lusikat {
     width:100%;
+  }
+  .painikkeet {
+    padding: 3% 5% 4% 5%;
+    max-width: 90%;
+    margin: 2%;
+  }
+  #reseptikuvat {
+    min-width: 100%;
   }
 }
