@@ -1,0 +1,18 @@
+/* Bootsrap navi-värit */
+
+.navbar-custom {
+    background-color: aqua;
+}
+/* ekstin väri */
+.navbar-custom .navbar-text{
+    color: black;
+}
+/* linkin väri */
+.navbar-custom .navbar-nav .nav-link {
+    color: black;
+}
+/* aktiivisen & hover-linkin väri */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: black;
+}
