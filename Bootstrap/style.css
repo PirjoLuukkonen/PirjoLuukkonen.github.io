@@ -16,3 +16,12 @@
 .navbar-custom .nav-item:hover .nav-link {
     color: black;
 }
+/* linkin alleviivais pois*/
+.navbar-custom {
+    text-decoration: none;
+}
+/*karusellin tausta boxi*/
+.carousel-caption {
+    background-color: rgb(240, 243, 245);
+    opacity: 0.8;
+}
