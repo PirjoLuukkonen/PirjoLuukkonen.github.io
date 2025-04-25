@@ -1,27 +1,32 @@
-/* Bootsrap navi-värit */
-
-.navbar-custom {
-    background-color: aqua;
-}
-/* ekstin väri */
-.navbar-custom .navbar-text{
-    color: black;
-}
-/* linkin väri */
-.navbar-custom .navbar-nav .nav-link {
-    color: black;
-}
-/* aktiivisen & hover-linkin väri */
-.navbar-custom .nav-item.active .nav-link,
-.navbar-custom .nav-item:hover .nav-link {
-    color: black;
-}
-/* linkin alleviivais pois*/
-.navbar-custom {
-    text-decoration: none;
-}
-/*karusellin tausta boxi*/
-.carousel-caption {
-    background-color: rgb(240, 243, 245);
-    opacity: 0.8;
-}
+/* Bootsrap navigaation CSS */
+    /* Navin tausta väri*/
+    .navbar-custom {
+        background-color: #333333;
+        text-decoration: none;
+    }
+    /* Tekstin väri navissa */
+    .navbar-custom .navbar-text{
+        color: rgb(255, 255, 255);
+    }
+    /* Navi linkkien väri */
+    .navbar-custom .navbar-nav .nav-link {
+        color: rgb(255, 255, 255);
+    }
+    /* aktiivisen & hover-linkin väri */
+    .navbar-custom .nav-item.active .nav-link,
+    .navbar-custom .nav-item:hover .nav-link {
+        color: rgb(220, 150, 30);
+    }
+    /* linkin alleviivais pois*/
+    .navbar-custom {
+        text-decoration: none;
+    }
+    /*karusellin tausta boxi*/
+    .carousel-caption {
+        background-color: rgb(240, 243, 245);
+        opacity: 0.8;
+    }
+    /* Hampparin reunuksen väri*/
+    .navbar-toggler {
+        color: rgb(220, 150, 30);
+    }
