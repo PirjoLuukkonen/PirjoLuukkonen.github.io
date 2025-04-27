@@ -9,6 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Noto Serif ja Noto Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Serif&display=swap" rel="stylesheet">
+
     
 </head>
 <body>
@@ -18,8 +21,7 @@
                     <!-- logo -->
                     <div class="navi-brad navbar-text">
                         <a href="index.html">
-                            <img src="butterfly.png" alt="Logo" width="50">
-                            <span class="navbar-text"> Bao & Pho </span>
+                            <img src="Bao&Pho4.jpg" alt="Bao & Pho logo" width="70">
                         </a> 
                     </div>
                     <!-- Hamppari valikko -->
@@ -33,111 +35,125 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="index.html">Etusivu</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="karuselli.html">Karuselli</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="about.html">Tietoa meistä</a>
-                                </li>
-                                
-                            <!--Alasvetovalikko -->
+                                <!--Alasvetovalikko -->
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Menu</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="kortit.html">Ruoka valikoima</a></li>
-                                            <li><a class="dropdown-item" href="haitari.html">Hinnasto</a></li>
-                                        </ul>
-                                </li> 
+                                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Menu</a>
+                                      <ul class="dropdown-menu">
+                                          <li><a class="dropdown-item" href="ruoka.html">Ruokavalikoima</a></li>
+                                          <li><a class="dropdown-item" href="hinnasto.html">Hinnasto</a></li>
+                                      </ul>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" href="tietoa.html">Tietoa meistä</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="yhteystiedot.html">Yhteystiedot</a>
+                                </li>
                             </ul>
                         </div>
                 </div>
         </nav> 
-        <!--Etusivun sisältö -->
-        <div class="container">
-            <img src="kiinalaisetlyhdyt.jpg" class="d-block w-100" alt="...">
-            <h1>Tässä kiva mallisivu </h1>
-            <p> Tämä sisltä on .container luokan sisällä.</p>
-            <p>The .container luokka on osa bootstrap tyylejää. 
-                Se tarjoaa sivun leveyteen reagoivan säiliön.</p>
-        </div>
-        
-        <div class="row">
-            <div class="col-sm-6 mb-3 mb-sm-0">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Katso meidän menu</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Menu</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Varaa pöytä</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Varaukset</a>
-                </div>
-              </div>
-            </div>
-        </div>
 
-
-        <div class="container p-5 my-5 bg-primary text-white">
-            <h2>Suosituimmat annokset</h2>
-            <p>Tässä säsiliössä on määritely taustaväri ja tekstin väri sekä enemmän reunatäyetttä ja marginaaleja.
-        <div>
-        <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                </div>
-                <div class="col-md-8">
-                </div>
+    <!--Etusivun kuvan sisältö -->
+    <div class="hero-container position-relative">
+      <img src="ravintola.jpg" class="w-100" alt="Kuva Bao & Pho ravintolasta">
+    
+      <div class="hero-text-box position-absolute top-50 end-0 translate-middle-y text-black">
+        <h1>Tervetuloa</h1>
+        <h1>Bao & Pho!</h1>
+        <p>Täällä voit nauttia autenttisesta aasialaisesta ruuasta suoraan Helsingin sydämessä</p>
+      </div>
+    </div>
+    <br>
+    <!--CTA toiminnot-->
+    <div class="row">
+        <div class="col-sm-6 mb-3 mb-sm-0">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Katso meidän menu</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. </p>
+              <a href="ruoka.html" class="btn btn-primary">Menu</a>
             </div>
+          </div>
         </div>
-        <!-- karuselli-->
-        <div id="carouselExampleDark" class="carousel carousel-dark slide">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Varaa pöytä</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. </p>
+              <a href="yhteystiedot.html" class="btn btn-primary">Pöytävaraukseen</a>
             </div>
+          </div>
+        </div>
+    </div>
+
+    <!--Kuva karuselli-->
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-
-              <div class="carousel-item active" data-bs-interval="10000">
-                <img src="Khaopad.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption">
-                  <h3>Khao Pad</h3>
-                  <p>Some representative placeholder content for the first slide.</p>
-                </div>
+              <div class="carousel-item active">
+                <img src="bao.jpg" class="d-block w-100" alt="Pad Thai">
               </div>
-
-              <div class="carousel-item" data-bs-interval="2000">
-                <img src="padkrapao.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption">
-                  <h3>Pad Kra Pao</h3>
-                  <p>Some representative placeholder content for the second slide.</p>
-                </div>
-              </div>
-
               <div class="carousel-item">
-                <img src="PadThai.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption">
-                  <h3>Pad Thai</h3>
-                  <p>Some representative placeholder content for the third slide.</p>
-                </div>
+                <img src="pho.jpg" class="d-block w-100" alt="Pad Kra Pao">
               </div>
-
+              <div class="carousel-item">
+                <img src="frieddumlings.jpg" class="d-block w-100" alt="Khao Pad">
+              </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+              <span class="visually-hidden">Edellinen</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+              <span class="visually-hidden">Seuraava</span>
             </button>
           </div>
+        </div>
+        
+            <!--Tekstiä karusellin vieressä, mobiilissa alla-->
+            <div class="col-12 col-md-6 d-flex align-items-center">
+              <div>
+                <h2>Suosituimmat annokset</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Footer-->
+        <footer class="bg-dark text-white text-center text-md-start mt-5 py-4 footer-custom">
+          <div class="container">
+            <div class="row">
+              
+              <div class="col-md-4 mb-3">
+                <h5>Bao & Pho</h5>
+                <p>Aasialaisia makuja Helsingin sydämessä.</p>
+              </div>
+        
+              <div class="col-md-4 mb-3">
+                <h6>Osoite</h6>
+                <p>Ravintolakatu 1<br>00100 Helsinki</p>
+                <p>Aukioloajat:<br>Ma-La: 11-21<br>Su: 12-20</p>
+              </div>
+        
+              <div class="col-md-4 mb-3">
+                <h6>Yhteystiedot</h6>
+                <p>Puh: 040 123 4567<br>
+                   Sähköposti: <a href="mailto:info@baoandpho.fi" class="text-white text-decoration-underline">info@baoandpho.fi</a></p>
+                <p>
+                  <a href="https://www.instagram.com/" class="text-white me-2">Instagram</a>
+                  <a href="https://www.facebook.com/?locale=fi_FI" class="text-white">Facebook</a>
+                </p>
+              </div>
+        
+            </div>
+            <hr class="border-light">
+            <p class="text-center small mb-0">© 2025 Bao & Pho</p>
+          </div>
+        </footer>
     </main>        
 </body>
 </html>
