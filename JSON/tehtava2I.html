@@ -45,14 +45,17 @@
         <p>
             <input type="text" id="pokemonName" placeholder="Enter Pokemon name">
             <button onclick="poke()">Hae</button><br>
+        </p>
 
         <div id="nimi">Kirjoita laatikkoon Pokemonin nimi</div>
         <p id="kuva2"></p>
-        </p>
-        <p>
+        <div id="extra-buttons"></div>
+        <div id="ominaisuudet"></div>
+        <div id="vastaus"></div>
+
         <h5>Pokemonien nimiä</h5>
-        <div>Jos et muista Pokemoneja ulkoa, tässä joitakin
-        <br><br>
+        <div>
+            Jos et muista Pokemoneja ulkoa, tässä joitakin <br><br>
         </div>
         <ul>
             <li>Mew</li>
@@ -71,10 +74,12 @@
             <li>Geodude</li>
             <li>Gengar</li>
         </ul>
-        Tämän listan muodostamiseen on hyödynetty Microsoft Copilotia, joka on GPT-4-arkkitehtuuriin perustuva tekoälyavustaja.<br>
-        Olen käyttänyt promtia "Give me a list of pokemon names in HTML format" 
+        <p>
+            Tämän listan muodostamiseen on hyödynetty Microsoft Copilotia, joka on GPT-4-arkkitehtuuriin perustuva tekoälyavustaja.<br>
+            Olen käyttänyt promtia "Give me a list of pokemon names in HTML format" 
         </p>
 
+    </main>
 
         <script>
             function poke() {
@@ -103,20 +108,41 @@
 
                     .catch(function (error) {
                         document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
-                    })
-
-                function pokekuva(obj) {
-                //Tallennetaan muuttujan linkki josta löytty Poken kuva    
-                    let pokeurl = obj.sprites.front_default;
-                //Kirjoitetaan kuva, ja nimi sivulla sekä tyhyjennetään hakukenttä    
-                    document.getElementById("kuva2").innerHTML = "<img src=" + pokeurl + ">";
-                    document.getElementById("nimi").innerHTML = "<b>" + name + "</b>";
-                    document.getElementById("pokemonName").value = "";
-                }
+                    });
             }
 
-        </script>
+            function pokekuva(obj) {
+            //Tallennetaan muuttujan linkki josta löytty Poken kuva    
+                let pokeurl = obj.sprites.front_default;
+            //Kirjoitetaan kuva, ja nimi sivulla sekä tyhyjennetään hakukenttä    
+                document.getElementById("kuva2").innerHTML = "<img src=" + pokeurl + ">";
+                document.getElementById("nimi").innerHTML = "<b>" + name + "</b>";
+                document.getElementById("pokemonName").value = "";
 
-    </main>
+                // Näytä ominaisuudet
+                let ominaisuudet = `
+                    <ul>
+                        <li>Korkeus: ${obj.height}</li>
+                        <li>Paino: ${obj.weight}</li>
+                        <li>Tyyppi: ${obj.types.map(t => t.type.name).join(", ")}</li>
+                    </ul>
+                `;
+                document.getElementById("ominaisuudet").innerHTML = ominaisuudet;
+            
+                // Näytä "Käännä" -painike
+                window.pokemonData = obj; // Tallennetaan globaaliin muuttujaan, koska JSON.stringify ei toimi kunnolla onclickissä
+                window.pokemonName = name;
+                document.getElementById("extra-buttons").innerHTML = `<button onclick='kaanna(${JSON.stringify(obj)}, "${name}")'>Käännä</button>`;
+            }
+
+            // Käännösfunktio
+            function kaanna(obj, name) {
+                if (!window.pokemonData || !window.pokemonName) return;
+                let selkakuva = obj.sprites.back_default;
+                document.getElementById("kuva2").innerHTML = `<img src="${selkakuva}">`;
+                document.getElementById("nimi").innerHTML = `<b>${name} (takaa)</b>`;
+                document.getElementById("pokemonName").value = "";
+            }
+        </script>
 </body>
 </html>
