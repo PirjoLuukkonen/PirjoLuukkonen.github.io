@@ -120,9 +120,9 @@
         // Näytä ominaisuudet
         let ominaisuudet = `
             <ul>
-                <li>Korkeus: ${obj.height}</li>
-                <li>Paino: ${obj.weight}</li>
-                <li>Tyyppi: ${obj.types.map(t => t.type.name).join(", ")}</li>
+                <p>Korkeus: ${obj.height}</p>
+                <p>Paino: ${obj.weight}</p>
+                <p>Tyyppi: ${obj.types.map(t => t.type.name).join(", ")}</p>
             </ul>
         `;
         document.getElementById("ominaisuudet").innerHTML = ominaisuudet;
