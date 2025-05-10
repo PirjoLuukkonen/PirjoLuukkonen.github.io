@@ -30,10 +30,10 @@
                                 <a class="nav-link" href="index.html">Etusivu (Tehtävä 1 OSA I)</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="tehtava1II.html">Tehtävä 1 OSA II</a>
+                                <a class="nav-link" href="tehtava1.html">Tehtävä 1 OSA II</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="tehtava2I.html">Tehtävä 2 OSA I</a>
+                                <a class="nav-link" href="tehtava2.html">Tehtävä 2 OSA I ja II</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="tehtava3.html">Tehtävä 3</a>
@@ -55,7 +55,7 @@
             .then(function (responseJson) {
             kerro(responseJson); 
             }) 
-            // Jos hakemisessa tuli jokin virhe, kirjoitetaan sivulle siitä tieto
+            // Jos hakemisessa tulisi jokin virhe, kirjoitetaan sivulle siitä tieto
             .catch(function (error) {
                 document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
             })
