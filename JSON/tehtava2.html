@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON tehtävät</title>
+
+<!-- Bootstrap linkitykset -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Serif&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-custom">
+        <div class="container-fluid">
+            </div>
+            <!-- Hamppari valikko -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Hampparivalikon sisus-->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">             
+                    <!-- Navigaatio linkit -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Etusivu (Tehtävä 1 OSA I)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tehtava1.html">Tehtävä 1 OSA II</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tehtava2.html">Tehtävä 2 OSA I ja II</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tehtava3.html">Tehtävä 3</a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+    </nav>
+
+<main class="container mt-4">
+    <h1>Pokemon haku</h1>
+    <p>
+        <input type="text" id="pokemonName" placeholder="Enter Pokemon name">
+        <button onclick="poke()">Hae</button><br>
+    </p>
+
+    <div id="nimi">Kirjoita laatikkoon Pokemonin nimi</div>
+    <p id="kuva2"></p>
+    <div id="extra-buttons"></div>
+    <div id="ominaisuudet"></div>
+    <div id="vastaus"></div> <!-- Lisätty virheviestille -->
+
+    <h5>Pokemonien nimiä</h5>
+    <div>
+        Jos et muista Pokemoneja ulkoa, tässä joitakin<br><br>
+    </div>
+    <ul>
+        <li>Mew</li>
+        <li>Eevee</li>
+        <li>Bulbasaur</li>
+        <li>Ivysaur</li>
+        <li>Venusaur</li>
+        <li>Bulbasaur</li>
+        <li>Charmander</li>
+        <li>Squirtle</li>
+        <li>Pikachu</li>
+        <li>Jigglypuff</li>
+        <li>Meowth</li>
+        <li>Psyduck</li>
+        <li>Machop</li>
+        <li>Geodude</li>
+        <li>Gengar</li>
+    </ul>
+    <p>
+        Tämän listan muodostamiseen on hyödynnetty Microsoft Copilotia, joka on GPT-4-arkkitehtuuriin perustuva tekoälyavustaja.<br>
+        Olen käyttänyt promtia "Give me a list of pokemon names in HTML format"
+    </p>
+</main>
+
+<script>
+    function poke() { //Tallennetaan annettu Poken nimi muuttujaan pokeName, muuttetaan se samalla pieniksi kirjaimiksi
+        const pokeName = document.getElementById("pokemonName").value.toLowerCase();
+
+        //Tallennetaan myös nimi talteen muuttujaan name
+        let name = document.getElementById("pokemonName").value;
+
+        //Kutsutaan fetchiä halutun Poken tiedoilla, liitetään saau nimi URL:iin
+        fetch(`https://pokeapi.co/api/v2/pokemon/${pokeName}`)
+
+            // Muunnetaan vastaus JSON-muotoon 
+            .then(response => response.json())
+
+            //Käsitellään muunnettu (eli JSON muotoinen) vastaus 
+            // Kutsutaan funktiota kerro()ja välitetään sille json-vastaus
+            .then(responseJson => {
+                pokekuva(responseJson, name);
+            })
+
+            // Jos tuli jokin virhe 
+            .catch(error => {
+                document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
+            });
+    }
+
+    function pokekuva(obj, name) {
+
+        //Tallennetaan muuttujan linkki josta löytty Poken kuva
+        let pokeurl = obj.sprites.front_default;
+
+        //Kirjoitetaan kuva, ja nimi sivulla sekä tyhyjennetään hakukenttä 
+        document.getElementById("kuva2").innerHTML = `<img src="${pokeurl}">`;
+        document.getElementById("nimi").innerHTML = `<b>${name}</b>`;
+        document.getElementById("pokemonName").value = "";
+
+        // Näytä ominaisuudet
+        let ominaisuudet = `
+            <ul>
+                <li>Korkeus: ${obj.height}</li>
+                <li>Paino: ${obj.weight}</li>
+                <li>Tyyppi: ${obj.types.map(t => t.type.name).join(", ")}</li>
+            </ul>
+        `;
+        document.getElementById("ominaisuudet").innerHTML = ominaisuudet;
+
+        // Näytä käännä-painike
+        window.pokemonData = obj; // Tallennetaan globaaliin muuttujaan, koska JSON.stringify ei toimi kunnolla onclickissä
+        window.pokemonName = name;
+        document.getElementById("extra-buttons").innerHTML = `<button onclick="kaanna()">Käännä</button>`;
+    }
+    
+    // Käännösfunktio
+    function kaanna() {
+        if (!window.pokemonData || !window.pokemonName) return;
+        let selkakuva = window.pokemonData.sprites.back_default;
+        document.getElementById("kuva2").innerHTML = `<img src="${selkakuva}">`;
+        document.getElementById("nimi").innerHTML = `<b>${window.pokemonName} (takaa)</b>`;
+        document.getElementById("pokemonName").value = "";
+    }
+</script>
+
+</body>
+</html>

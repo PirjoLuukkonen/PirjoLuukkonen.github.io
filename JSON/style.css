@@ -9,7 +9,7 @@
         font-family: 'Noto Sans', sans-serif;
     }
 
-/* Bootsrap navigaation CSS */
+/* Navigaation CSS */
     /* Navin tausta väri*/
     .navbar-custom {
         background-color: #333333;
@@ -32,11 +32,6 @@
     .navbar-custom {
         text-decoration: none;
     }
-    /*karusellin tausta boxi*/
-    .carousel-caption {
-        background-color: rgb(240, 243, 245);
-        opacity: 0.8;
-    }
     /* Hampurilaisvalikon vaakaviivojen väri valkoiseksi*/
     .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
@@ -45,45 +40,4 @@
     /* Hampparin reunuksen väri*/
     .navbar-toggler {
         color: rgb(220, 150, 30);
-    }
-
-
-/*Etusivun CSS*/
-    /*Painikkeiden väri*/
-    .btn-primary {
-        background-color: rgb(220, 150, 30) !important;
-        border-color: rgb(220, 150, 30) !important;
-    }
-    /*Karusellin ympärillä olevan laatikon väri*/
-    .bg-primary {
-    background-color: #333333 !important; 
-    border-color: #333333 !important;
-    }
-    .hero-container {
-        position: relative;
-        max-height: 600px;
-        overflow: hidden;
-    }
-    /* laatikko etusivukuvan päällä*/
-    .hero-text-box {
-        background-color: rgba(255, 255, 255, 0.8);
-        padding: 2rem;
-        max-width: 400px;
-        margin-right: 2rem;
-        border-radius: 0.5rem;
-        box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-    }
-    /*laatikon koko*/
-    .hero-text-box h1 {
-        font-size: 200%;
-    }
-    /*laatikon koko*/
-    .hero-text-box p {
-        font-size: 120%;
-    }
-/* Footer */
-    /*Footerin taustan väri*/
-    .footer-custom {
-        background-color: #333333;
-        color: rgb(240, 243, 245);
     }
