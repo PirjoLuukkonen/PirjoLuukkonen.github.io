@@ -1,0 +1,27 @@
+/* Värit */
+.bg-darkblue {
+  background-color: #002b5c !important;
+}
+
+.navbar .nav-link,
+.navbar-brand {
+  color: #fff !important;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+}
+
+a {
+  color: #008c9e;
+}
+
+.btn-custom {
+  background-color: #00b4b4;
+  color: #fff;
+}
+
+.btn-custom:hover {
+  background-color: #009999;
+}
