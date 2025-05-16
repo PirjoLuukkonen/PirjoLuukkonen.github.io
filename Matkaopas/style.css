@@ -14,14 +14,14 @@ body {
 }
 
 a {
-  color: #008c9e;
+  color: #067e8e;
 }
 
 .btn-custom {
-  background-color: #00b4b4;
+  background-color: #067e8e;
   color: #fff;
 }
 
 .btn-custom:hover {
-  background-color: #009999;
+  background-color: #067e8e;
 }
