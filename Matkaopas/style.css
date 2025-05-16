@@ -1,27 +1,34 @@
 /* Värit */
+
+/* Navigaatiopalkin taustaväri*/
 .bg-darkblue {
   background-color: #002b5c !important;
 }
 
+/* Navigaation linkkien ja logon väri*/
 .navbar .nav-link,
 .navbar-brand {
   color: #fff !important;
 }
 
+/* Sivun taustan ja tekstin väri*/
 body {
   background-color: #fff;
   color: #000;
 }
 
+/* Linkkien väri*/
 a {
   color: #067e8e;
 }
 
+/* Painikkeiden väri*/
 .btn-custom {
   background-color: #067e8e;
   color: #fff;
 }
 
+/* painikkeen taustaväri muuttuu*/
 .btn-custom:hover {
-  background-color: #067e8e;
+  background-color: #002b5c;
 }
